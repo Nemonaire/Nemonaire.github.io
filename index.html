@@ -24,8 +24,14 @@
     .chip{border:1px solid var(--border);padding:6px 10px;border-radius:999px;color:var(--muted);font-size:.85rem}
     main{padding:28px 0 80px}
     .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center;padding:36px 0 10px}
-    .hero h1{font-size:40px;line-height:1.1;margin:0 0 12px}
-    .hero p{color:var(--muted);margin:0}
+    .hero h1{font-size:40px;line-height:1.15;margin:0 0 18px}
+    .hero p {
+      color: var(--muted);
+      margin: 0 0 10px;
+    }
+    .hero p + p {
+      margin-top: 12px;
+    }
     .tagline{display:inline-flex;gap:10px;align-items:center;color:var(--muted);font-size:.95rem}
     .tagline .dot{width:8px;height:8px;border-radius:50%;background:linear-gradient(135deg,var(--brand),var(--brand2))}
     .hero-card{background:linear-gradient(180deg,var(--elev),var(--card));border:1px solid var(--border);border-radius:18px;padding:18px}
