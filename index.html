@@ -63,18 +63,19 @@
     display: block !important;
     padding: 36px 0 10px;
   }
-  .hero-flex {
+  .hero-flex{
     display: grid;
-    grid-template-columns: 1fr 320px;
+    grid-template-columns: minmax(0,1fr) 360px;
     gap: 32px;
-    align-items: start;
+    align-items: stretch;
   }
-  .hero-right {
+  .hero-right{
     background: var(--elev2);
     border: 1px solid var(--border);
     border-radius: 14px;
     padding: 18px 20px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+    height: 100%;
   }
   @media (max-width: 900px) {
     .hero-flex { grid-template-columns: 1fr; }
@@ -109,38 +110,44 @@
         and creative rendering applications for 4D Gaussian Splatting.
       </p>
 
-      <div class="tech" style="margin-top:12px; margin-bottom:16px">
-        <span class="pill">4D/3D Gaussian Splatting (4DGS/3DGS)</span>
-        <span class="pill">Creative Technology</span>
-        <span class="pill">Graphics</span>
-        <span class="pill">Real-time Rendering</span>
-        <span class="pill">GPU Programming</span>
-        <span class="pill">VR</span>
-        <span class="pill">Real-time Communication</span>
-        <span class="pill">Cross-platform Development (macOS, iOS, Android, Windows, Linux)</span>
-        <span class="pill">VFX Tools (Houdini, Blender, Premiere Pro, Nuke)</span>
-      </div>
-
       <div class="btns">
         <a class="btn" href="#projects">Explore Projects</a>
         <a class="btn ghost" href="#contact">Get in touch</a>
       </div>
     </div>
 
-    <div class="hero-right">
-      <h3 style="margin-bottom: 8px;">Tech Stack</h3>
-      <div class="tech">
-        <span class="pill">C++</span>
-        <span class="pill">Swift</span>
-        <span class="pill">Python</span>
-        <span class="pill">Java</span>
-        <span class="pill">Objective-C</span>
-        <span class="pill">JavaScript</span>
-        <span class="pill">OpenGL</span>
-        <span class="pill">WebGL</span>
-        <span class="pill">Metal</span>
+    <div class="hero-right-col">
+      <div class="panel">
+        <h3 class="panel-title">Skills</h3>
+        <div class="tech">
+          <span class="pill">4D/3D Gaussian Splatting (4DGS/3DGS)</span>
+          <span class="pill">Creative Technology</span>
+          <span class="pill">Graphics</span>
+          <span class="pill">Real-time Rendering</span>
+          <span class="pill">GPU Programming</span>
+          <span class="pill">VR</span>
+          <span class="pill">Real-time Communication</span>
+          <span class="pill">Cross-platform Development (macOS, iOS, Android, Windows, Linux)</span>
+          <span class="pill">VFX Tools (Houdini, Blender, Premiere Pro, Nuke)</span>
+        </div>
+      </div>
+    
+      <div class="panel">
+        <h3 class="panel-title">Tech Stack</h3>
+        <div class="tech">
+          <span class="pill">C++</span>
+          <span class="pill">Swift</span>
+          <span class="pill">Python</span>
+          <span class="pill">Java</span>
+          <span class="pill">Objective-C</span>
+          <span class="pill">JavaScript</span>
+          <span class="pill">OpenGL</span>
+          <span class="pill">WebGL</span>
+          <span class="pill">Metal</span>
+        </div>
       </div>
     </div>
+
   </div>
 </section>
 
