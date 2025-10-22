@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ning Dai – Portfolio</title>
+  <meta name="description" content="Ning Dai – Portfolio | Bridging 4D Gaussian Splatting with real-time creative tools across AR and film production." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b0b0c;--elev:#151517;--elev2:#1c1c20;--text:#e9e9ee;--muted:#b7b7c5;--brand:#69c9d0;--brand2:#ee1d52;--card:#121215;--border:#26262b;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;}
+    a{color:var(--brand);text-decoration:none}
+    a:hover{opacity:.9}
+    .container{max-width:1100px;margin:0 auto;padding:0 20px}
+    header.site{position:sticky;top:0;backdrop-filter:saturate(120%) blur(10px);background:color-mix(in hsl, var(--bg) 85%, transparent);border-bottom:1px solid var(--border);z-index:50}
+    .nav{display:flex;align-items:center;gap:18px;padding:14px 0}
+    .brand{font-weight:700;letter-spacing:.3px}
+    .spacer{flex:1}
+    .chip{border:1px solid var(--border);padding:6px 10px;border-radius:999px;color:var(--muted);font-size:.85rem}
+    main{padding:28px 0 80px}
+    .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center;padding:36px 0 10px}
+    .hero h1{font-size:40px;line-height:1.1;margin:0 0 12px}
+    .hero p{color:var(--muted);margin:0}
+    .tagline{display:inline-flex;gap:10px;align-items:center;color:var(--muted);font-size:.95rem}
+    .tagline .dot{width:8px;height:8px;border-radius:50%;background:linear-gradient(135deg,var(--brand),var(--brand2))}
+    .hero-card{background:linear-gradient(180deg,var(--elev),var(--card));border:1px solid var(--border);border-radius:18px;padding:18px}
+    .hero-card .grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    .thumb{aspect-ratio:16/9;background:#0f0f12;border:1px solid var(--border);border-radius:12px;display:flex;align-items:center;justify-content:center;color:#888;font-size:.9rem}
+    .btns{display:flex;gap:10px;margin-top:16px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--border);border-radius:12px;padding:10px 14px;background:var(--elev2);color:var(--text);font-weight:600}
+    .btn.ghost{background:transparent;color:var(--muted)}
+    section{padding:26px 0}
+    .section-title{display:flex;align-items:center;gap:10px;margin:8px 0 16px}
+    .section-title h2{margin:0;font-size:22px}
+    .pill{padding:2px 8px;border:1px solid var(--border);border-radius:999px;color:var(--muted);font-size:.8rem}
+    .grid-cards{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
+    .card{grid-column:span 6;background:linear-gradient(180deg,var(--elev),var(--card));border:1px solid var(--border);border-radius:16px;overflow:hidden}
+    .card-head{position:relative}
+    .badge{position:absolute;top:10px;left:10px;background:rgba(10,10,12,.8);color:#ddd;border:1px solid var(--border);padding:4px 8px;border-radius:999px;font-size:.75rem}
+    .card-media{aspect-ratio:16/9;background:#0f0f12;display:flex;align-items:center;justify-content:center;color:#888}
+    .card-body{padding:14px 14px 16px}
+    .card h3{margin:0 0 6px;font-size:18px}
+    .tech{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+    .tech .pill{font-size:.75rem}
+    .card p{color:var(--muted);margin:0}
+    .split{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:10px}
+    .list{margin:10px 0 0;padding-left:18px;color:var(--muted)}
+    footer{border-top:1px solid var(--border);padding:20px 0 40px;color:var(--muted)}
+    .contacts{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+    .contact a{color:var(--muted)}
+    .dotline{height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.06),transparent);margin:24px 0}
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr}
+      .card{grid-column:span 12}
+      .hero-card .grid{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <header class="site">
+    <div class="container nav">
+      <div class="brand">Ning Dai</div>
+      <div class="pill">UCLA MEng – AI</div>
+      <div class="spacer"></div>
+      <a href="#projects" class="chip">Projects</a>
+      <a href="#about" class="chip">About</a>
+      <a href="#contact" class="chip">Contact</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- HERO -->
+    <section class="hero">
+      <div>
+        <div class="tagline"><span class="dot"></span> Bridging AI, Graphics & Real‑time Creative Tools</div>
+        <h1>4D Gaussian Splatting across visionOS & Houdini</h1>
+        <p>Creative technologist and graphics engineer focused on Metal, real‑time rendering, and AR/VR tooling. Previously ByteDance (RTC/SDK). Now building 4DGS viewers, Houdini plugins, and hybrid 3D/4D workflows.</p>
+        <div class="btns">
+          <a class="btn" href="#projects">Explore Projects</a>
+          <a class="btn ghost" href="#contact">Get in touch</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="grid">
+          <div class="thumb">Add Vision Pro clip (mp4)</div>
+          <div class="thumb">Add Houdini node screenshot</div>
+        </div>
+        <div class="tech" style="margin-top:12px">
+          <span class="pill">Metal</span>
+          <span class="pill">C++</span>
+          <span class="pill">visionOS</span>
+          <span class="pill">Houdini HDK</span>
+          <span class="pill">4DGS / 3DGS</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="dotline"></div>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <div class="section-title">
+        <h2>Selected Projects</h2>
+        <span class="pill">4 items</span>
+      </div>
+
+      <!-- 1. Vision Pro 4DGS Viewer -->
+      <article class="card">
+        <div class="card-head">
+          <div class="badge">Prototype – NDA assets not shown</div>
+          <div class="card-media">Add Vision Pro 4DGS video thumbnail</div>
+        </div>
+        <div class="card-body">
+          <h3>Vision Pro 4DGS Viewer — Real‑time Immersive Playback</h3>
+          <p>Metal + Swift renderer for dynamic 4D Gaussian scenes on visionOS. Gesture controls for drag/scale/rotate and temporal scrubbing; GPU‑based depth sorting and covariance decomposition.</p>
+          <div class="split">
+            <ul class="list">
+              <li>Metal GPU sorting, frustum culling, dynamic splat rendering</li>
+              <li>Pinch/drag/rotate gestures, hold‑to‑reset UX</li>
+              <li>Time‑aware playback with incremental streaming</li>
+            </ul>
+            <div>
+              <div class="tech">
+                <span class="pill">Metal</span><span class="pill">Swift</span><span class="pill">visionOS</span><span class="pill">4DGS</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 2. Houdini 4DGS Plugin -->
+      <article class="card">
+        <div class="card-head">
+          <div class="card-media">Add Houdini viewport / node graph image</div>
+        </div>
+        <div class="card-body">
+          <h3>Houdini 4DGS Plugin — Node‑based Creative Workflow</h3>
+          <p>Custom HDA node for importing and visualizing 4D Gaussian Splatting inside Houdini, enabling procedural control and film‑style production workflows.</p>
+          <div class="split">
+            <ul class="list">
+              <li>Frame interpolation & temporal playback in node graph</li>
+              <li>Artist controls: radius/color/motion trail</li>
+              <li>Memory‑efficient multi‑frame caching & data streaming</li>
+            </ul>
+            <div class="tech">
+              <span class="pill">C++</span><span class="pill">OpenGL</span><span class="pill">Houdini HDK</span><span class="pill">4DGS</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 3. 3DGS Hex Rendering in Houdini -->
+      <article class="card">
+        <div class="card-head">
+          <div class="card-media">Add hex splat vs round splat comparison</div>
+        </div>
+        <div class="card-body">
+          <h3>3DGS Advanced Rendering — Hexagonal / Multi‑Pass</h3>
+          <p>Extended standard 3D Gaussian workflow with a custom hexagonal splat shader and depth‑aware blending for denser clouds and smoother overlap.</p>
+          <div class="split">
+            <ul class="list">
+              <li>GPU‑friendly hex splat rasterization</li>
+              <li>Transparency & blending tuned across depth layers</li>
+              <li>LOD controls for interactive viewport performance</li>
+            </ul>
+            <div class="tech">
+              <span class="pill">Shader</span><span class="pill">OpenGL</span><span class="pill">3DGS</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 4. 4DGS + Traditional 3D Fusion -->
+      <article class="card">
+        <div class="card-head">
+          <div class="card-media">Add depth‑composite before/after image</div>
+        </div>
+        <div class="card-body">
+          <h3>4DGS × Traditional 3D Fusion — Focus & Depth Composition</h3>
+          <p>Hybrid pipeline that composites 4DGS with polygonal assets using per‑pixel depth, adjustable focal plane, and film‑style aperture simulation.</p>
+          <div class="split">
+            <ul class="list">
+              <li>Depth‑based blending between 4DGS and meshes</li>
+              <li>Refocus tool: adjustable focal plane & aperture</li>
+              <li>Lighting & camera integration for hybrid scenes</li>
+            </ul>
+            <div class="tech">
+              <span class="pill">Compositing</span><span class="pill">Depth</span><span class="pill">4DGS + Mesh</span>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <div class="dotline"></div>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="section-title"><h2>About</h2></div>
+      <p>I'm an AI‑oriented graphics engineer focused on real‑time rendering, AR/VR, and creative tooling. Previously Multimedia Development Engineer at ByteDance (cross‑platform C++ SDKs for RTC/media), now at 4DV.ai building 4D Gaussian Splatting renderers and tools across visionOS and Houdini.</p>
+      <p style="color:var(--muted)">Availability: Jun 19 – Sep 20, 2026 (Full‑time Summer Internship)</p>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="section-title"><h2>Contact</h2></div>
+      <div class="contacts">
+        <div class="contact"><a href="mailto:daining@ucla.edu">daining@ucla.edu</a></div>
+        <div class="contact"><a href="#">GitHub</a></div>
+        <div class="contact"><a href="#">LinkedIn</a></div>
+        <div class="contact"><a href="#">Resume (PDF)</a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="dotline"></div>
+      <div class="contacts">
+        <div>© 2025 Ning Dai</div>
+        <div class="spacer"></div>
+        <div class="pill">Built for GitHub Pages</div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
