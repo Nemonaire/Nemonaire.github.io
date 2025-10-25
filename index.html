@@ -60,6 +60,10 @@
     .tech{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
     .tech .pill{font-size:.75rem}
     .card p{color:var(--muted);margin:0}
+    .card {
+      margin-bottom: 32px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
     .split{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:10px}
     .list{margin:10px 0 0;padding-left:18px;color:var(--muted)}
     footer{border-top:1px solid var(--border);padding:20px 0 40px;color:var(--muted)}
@@ -256,10 +260,12 @@
               <li>Transparency & blending tuned across depth layers</li>
               <li>LOD controls for interactive viewport performance</li>
             </ul>
-            <div class="tech">
-              <span class="pill">Shader</span><span class="pill">OpenGL</span><span class="pill">3DGS</span>
+            <div>
+              <div class="tech">
+                <span class="pill">Shader</span><span class="pill">OpenGL</span><span class="pill">3DGS</span>
+              </div>
             </div>
-          </div>
+          <div>
         </div>
       </article>
 
@@ -277,11 +283,13 @@
               <li>Refocus tool: adjustable focal plane & aperture</li>
               <li>Lighting & camera integration for hybrid scenes</li>
             </ul>
-            <div class="tech">
-              <span class="pill">Compositing</span><span class="pill">Depth</span><span class="pill">4DGS + Mesh</span>
+            <div>
+              <div class="tech">
+                <span class="pill">Compositing</span><span class="pill">Depth</span><span class="pill">4DGS + Mesh</span>
+              </div>
             </div>
           </div>
-        </div>
+        <div>
       </article>
     </section>
 
