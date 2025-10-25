@@ -9,6 +9,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 80px;
+    }
     :root{
       --bg:#0b0b0c;--elev:#151517;--elev2:#1c1c20;--text:#e9e9ee;--muted:#b7b7c5;--brand:#69c9d0;--brand2:#ee1d52;--card:#121215;--border:#26262b;
     }
@@ -83,7 +87,7 @@
     display: grid;
     grid-template-columns: minmax(0,1fr) 360px;
     gap: 32px;
-    align-items: stretch;
+    align-items: start;
   }
   .hero-right-col {
     background: rgba(255,255,255,0.02);
