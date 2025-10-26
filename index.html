@@ -9,6 +9,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 40px;
+    }
     :root{
       --bg:#0b0b0c;--elev:#151517;--elev2:#1c1c20;--text:#e9e9ee;--muted:#b7b7c5;--brand:#69c9d0;--brand2:#ee1d52;--card:#121215;--border:#26262b;
     }
@@ -60,6 +64,10 @@
     .tech{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
     .tech .pill{font-size:.75rem}
     .card p{color:var(--muted);margin:0}
+    .card {
+      margin-bottom: 32px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
     .split{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:10px}
     .list{margin:10px 0 0;padding-left:18px;color:var(--muted)}
     footer{border-top:1px solid var(--border);padding:20px 0 40px;color:var(--muted)}
@@ -79,7 +87,7 @@
     display: grid;
     grid-template-columns: minmax(0,1fr) 360px;
     gap: 32px;
-    align-items: stretch;
+    align-items: start;
   }
   .hero-right-col {
     background: rgba(255,255,255,0.02);
@@ -195,8 +203,12 @@
       <!-- 1. Vision Pro 4DGS Rendering Application -->
       <article class="card">
         <div class="card-head">
-          <div class="badge">Prototype – NDA assets not shown</div>
-          <div class="card-media">Add Vision Pro 4DGS video thumbnail</div>
+          <div class="card-media">
+            <video autoplay loop muted playsinline preload="metadata" style="width:100%; border-radius:12px;">
+              <source src="videos/4DGS_Vision_Pro.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
         </div>
         <div class="card-body">
           <h3>Vision Pro 4DGS Rendering Application — Real-time 4D Gaussian Splatting Visualization</h3>
@@ -222,19 +234,20 @@
           <div class="card-media">Add Houdini viewport / node graph image</div>
         </div>
         <div class="card-body">
-          <h3>Houdini 4DGS Plugin — Node‑based Creative Workflow</h3>
-          <p>Custom HDA node for importing and visualizing 4D Gaussian Splatting inside Houdini, enabling procedural control and film‑style production workflows.</p>
+          <h3>Houdini 4DGS Plugin — VFX Tool for Editing 4D Gaussian Splatting Models</h3>
+          <p>Developed a Houdini plugin using C++, OpenGL, and Houdini HDK to render and edit 4D Gaussian Splatting models, extending and integrating with the open-source GSOPs framework.</p>
           <div class="split">
             <ul class="list">
-              <li>Frame interpolation & temporal playback in node graph</li>
-              <li>Artist controls: radius/color/motion trail</li>
-              <li>Memory‑efficient multi‑frame caching & data streaming</li>
+              <li>SOP nodes to render 4DGS models in both the Houdini viewport and OpenGL export renderer.</li>
+              <li>HDA tools for editing and compositing 4DGS models in VFX workflows.</li>
             </ul>
-            <div class="tech">
-              <span class="pill">C++</span><span class="pill">OpenGL</span><span class="pill">Houdini HDK</span><span class="pill">4DGS</span>
+            <div>
+              <div class="tech">
+                <span class="pill">C++</span><span class="pill">OpenGL</span><span class="pill">Houdini</span><span class="pill">4DGS</span>
+              </div>
             </div>
           </div>
-        </div>
+        <div>
       </article>
 
       <!-- 3. 3DGS Hex Rendering in Houdini -->
@@ -251,10 +264,12 @@
               <li>Transparency & blending tuned across depth layers</li>
               <li>LOD controls for interactive viewport performance</li>
             </ul>
-            <div class="tech">
-              <span class="pill">Shader</span><span class="pill">OpenGL</span><span class="pill">3DGS</span>
+            <div>
+              <div class="tech">
+                <span class="pill">Shader</span><span class="pill">OpenGL</span><span class="pill">3DGS</span>
+              </div>
             </div>
-          </div>
+          <div>
         </div>
       </article>
 
@@ -272,18 +287,34 @@
               <li>Refocus tool: adjustable focal plane & aperture</li>
               <li>Lighting & camera integration for hybrid scenes</li>
             </ul>
-            <div class="tech">
-              <span class="pill">Compositing</span><span class="pill">Depth</span><span class="pill">4DGS + Mesh</span>
+            <div>
+              <div class="tech">
+                <span class="pill">Compositing</span><span class="pill">Depth</span><span class="pill">4DGS + Mesh</span>
+              </div>
             </div>
           </div>
-        </div>
+        <div>
       </article>
     </section>
 
     <div class="dotline"></div>
 
   </main>
-
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="section-title">
+      <h2>Get in Touch</h2>
+    </div>
+    <p style="color: var(--muted); max-width: 600px;">
+      I'm currently based in Los Angeles, exploring creative technology at the intersection of AI and graphics.<br>
+      For collaboration, research opportunities, or project inquiries — feel free to reach out!
+    </p>
+    <div class="btns" style="margin-top: 16px;">
+      <a class="btn" href="mailto:daining@ucla.edu">Email Me</a>
+      <a class="btn ghost" href="http://linkedin.com/in/ning-dai-2171b9359" target="_blank">LinkedIn</a>
+      <a class="btn ghost" href="https://github.com/Nemonaire" target="_blank">GitHub</a>
+    </div>
+  </section>
   <footer>
     <div class="container">
       <div class="dotline"></div>
